@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #555555;
+}
+
+h1 {
+  margin-left: 100px;
+  font-size: 20px;  
+  color: rgb(233, 230, 230);
+}
+
+header {  
+  position: relative;  
+  width: 100%;
+  min-width: 1200px;
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  background-color: #000;
+}
+
+header::before {
+  position: absolute;
+  content: '';
+  left: 20px;
+  top: 10px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #000;
+  background-image: url('assets/images/burger.png');  
+}
+
+header::after {
+  position: absolute;
+  content: '';
+  right: 20px;
+  top: 15px;
+  width: 12px;
+  height: 19px;
+  cursor: pointer;
+  background-image: url('assets/images/dots.png');
+}
+
+main {
+  display: flex;
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  padding: 7px;
+  font-size: 17px;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  vertical-align: center;
+  background-color: lightgreen;  
+}
+
+.add:hover {
+  cursor: pointer;
+  background-color: rgb(101, 241, 118);
+}
+
+.plus {
+  width: 15px;
+  height: 15px;
+}
+
+.frames-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  width: 170px;
+  min-height: 600px;
+  padding-top: 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.frame {
+  border: 2px solid slategray;
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 10px 0;
+  background-color: cornsilk; 
+}
+
+.frame:hover {
+  border: 2px solid lightgreen;
+}
+
+.canvas {  
+  width: 600px;
+  height: 600px;
+  margin: 0 50px;
+  background-color: cornsilk;  
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.canvas:hover {
+  cursor: crosshair;
+}
+
+.canvas2 {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: cornsilk;  
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.frame-number {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 17px;
+  text-align: center;
+  background-color: slategrey;
+  border: 1px solid slategray;
+  color: #fff;
+}
+
+.bin,
+.clone {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.bin {
+  left: 1px;
+  bottom: 1px;
+  background-color: cornsilk;
+  content: url('assets/images/bin.png');
+}
+
+.clone {
+  right: 1px;
+  bottom: 1px;
+  background-color: cornsilk;
+  content: url('assets/images/copy.png');
+}
+
+.bin:hover,
+.clone:hover {
+  cursor: pointer;
+}
+
+.fps {
+  display: inline-block;
+  width: 80px;
+  padding-left: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.fps-slider {
+  cursor: grab
+}
+
+.inFullScreenMode {
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+}
